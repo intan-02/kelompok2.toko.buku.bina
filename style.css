@@ -1,0 +1,178 @@
+:root {
+    --coklat: rgb(173, 92, 0);
+    --crem: rgb(245, 214, 158);
+    --coklatua: rgb(99, 53, 0);
+    --hijau: #0a6b07;
+    --hijaumuda: #1f9c00;
+    --putih: #ffffff;
+}
+* {
+    box-sizing: border-box;
+}
+html,body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#nav-container {
+    background-color: var(--coklat);
+    position: sticky;
+    top: 0px;
+}
+.nav-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+}
+.nav-flex label,#humberger {
+    display: none;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a {
+    display: block;
+    color: var(--crem);
+    padding: 0 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+nav ul li a:hover {
+    background-color: var(--coklatua);
+    transition: all 0.3s;
+}
+.nav-brand h2 {
+    margin: 14px 0 0 10px;
+    color: var(--crem);
+}
+#hero-container {
+    background-image: url(../image/pexels-technobulka-2908984.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-attachment: fixed;
+}
+.text {
+    text-align: center;
+    color: var(--crem);
+    font-size: 20px;
+}
+.button {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--hijau);
+    padding: 10px;
+    color: var(--putih);
+    font-size: 16px;
+    border-radius: 10px;
+}
+.button:hover {
+    background-color: var(--hijaumuda);
+    color: var(--putih)
+}
+/* versi tablet */
+@media screen and (max-width:768px) {
+    /* Tampilkan icon humberger */
+    #nav-container .nav-flex label {
+        display: inline-block;
+        color: var(--crem);
+        font-style: normal;
+        font-size: 32px;
+        padding: 8px;
+    }
+    /* susun ulang menu menjadi vertical */
+    #nav-container .nav-flex {
+       width: 100%; 
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0px
+    }
+    nav ul li a {
+        display: block;
+        color: var(--crem);
+        background-color: var(--coklat);
+        padding: 0 30px;
+        height: auto;
+    }
+    /* Pindahkan posisi brand ke kanan, dan perkecil */
+    .nav-brand h2 {
+        position: absolute;
+        right: 20px;
+    }
+     /* Untuk menampilkan / menyembunyikan menu */
+    #nav-container nav {
+        display: none;
+    }
+    #nav-container .nav-flex input:checked ~ nav {
+        display: flex;
+    }
+    /* Menampilkan menu ketika teks garis tiga di klik */
+    #nav-container .nav-flex input:checked ~nav {
+        display: flex;
+    }
+    .about-flex {
+        flex-direction: column;
+    }
+    .about-image, .about-text {
+        width: auto;
+    }
+}
+.p1 {
+    background-color: rgb(173, 92, 0);
+    width: 400px;
+    height: 240px;
+    padding: 20px;
+    margin: 20px;
+    color: rgb(245, 214, 158);
+}
+hr {
+    border-color: rgb(206, 188, 172);
+}
+.p2 {
+    width: 800px;
+    height: 200px;
+    border: 5px solid rgb(148, 148, 148)
+}
+body {
+    background-image: url(../image/bg\ modul\ hukum\ perdata_keluarga.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    background-attachment: fixed;
+}
+.jumbutroon {
+    width: 1300px;
+    height: 700px;
+    border: 1px solid black;
+    margin:auto;
+    background-image: url(../image/pexels-joshsorenson-990432.jpg);
+    background-size: cover; 
+    background-attachment: fixed;
+}
+.regis {
+    width: 200px;
+    border: 5px solid rgb(164, 177, 189);
+    border-radius: 5px;
+    margin: 30px;
+}
+.p4 {
+    width: 250px;
+    border: 2px solid rgb(0, 0, 0);
+    border-inline-width: 5px;
+    border-radius: 5px;
+    margin: 30px;
+}
